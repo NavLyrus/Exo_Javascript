@@ -129,6 +129,94 @@ else {
 }
 
 
+
+/* Demandez à l'utilisateur d'entrer un nombre. Vérifiez si ce nombre est un multiple de 3 et de 5. Affichez un message en conséquence.
+Exemple de fonctionnement :
+Entrez un nombre : 15
+15 est un multiple de 3 et de 5.    */
+
+function Multiple() {
+    const NUMBER = parseFloat(prompt("entrez un nombre"));
+
+    if ((NUMBER%3===0) || (NUMBER%5===0)) {
+        console.log(NUMBER + " multiple de 3 ou de 5");
+    }
+    else {
+        console.log(NUMBER + " n'est pas multiple de 3 ou de 5");
+    }
+}
+
+/*Créez un programme où un nombre est prédéfini dans une variable (par exemple, nombre_secret = 42). Demandez à l'utilisateur de deviner le nombre, et indiquez s'il est plus grand, plus petit ou correct.
+Exemple de fonctionnement :
+Devinez le nombre secret : 30
+Trop petit !
+Devinez le nombre secret : 42
+Bravo, vous avez deviné !  */
+
+function JustePrix() {
+    const MAGIC = 58;
+    let trie = parseFloat(prompt("deviner le nombre magique"));
+
+    if(trie === MAGIC) {
+        console.log("Bravo vous avez gagnez !!!!!!!!")
+    }
+    else if (trie> MAGIC) {
+        console.log("Dommage trop grand ") 
+     }
+     else if (trie< MAGIC) {
+        console.log("Dommage trop petit ") 
+     }
+   
+}
+
+//Écrivez une boucle for qui affiche tous les nombres pairs entre 0 et 20 inclus.
+
+
+function Bouclette() {
     
+    for(let i=0 ; i < 21 ; i++) {
+        if(i%2===0) {
+            console.log(i);
+        }
+    }
+}
+
+/*Écrivez une boucle while qui demande à l'utilisateur de saisir un mot. Arrêtez la boucle si l'utilisateur entre "stop".
+Exemple de fonctionnement :
+Entrez un mot : Bonjour
+Entrez un mot : Soleil
+Entrez un mot : stop */
+
+function BoucleMot() {
+    let SAFE_WORD = "stop";
+    let expression;
+    let stop = true;
+
+    /*while (stop)  {
+        expression = prompt("entrez un mot");
+        if(expression === SAFE_WORD) {
+            stop = false;
+        }
+    } */
+
+   /*while(expression !== SAFE_WORD) {
+    expression = prompt("entrez un mot");
+    */
+   
+   while((expression=prompt("entrez un mot")) !== SAFE_WORD) 
+    {
+        console.log(expression); 
+    }
+}
+
+
+//Demander un nombre entre 1 et 10 tant qu’il n’est pas valide
+
+function Enumerer() {
+    let numb;
+    do {
+        numb = parseFloat(prompt("Entrez un chiffre entre 1 et 10"))
+    } while(numb<1 || numb>10)
+}
 
 
