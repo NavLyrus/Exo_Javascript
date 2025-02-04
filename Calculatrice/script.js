@@ -422,16 +422,20 @@ function EstPaire(number) {
     console.log(EstPaire(12));
 
 
-    function TableMulti() {
+  function TableMulti() {
 
-        function Table(operande) {
+        function Table(a) {
             let result=0;
-            let operande= parseFloat(prompt("quelle table de multiplication voulez-vous ?"));
+           // let i=1;
         
-            for(let i =1;i<11;i++) {
-                result= operande * i;
-                console.log(operande + " x " + i + " est egal à " + result);
+            for(let i = 1;i<11;i++) {
+                result= a * i;
+                console.log(a + " x " + i + " est egal à " + result);
             }
-        }
 
-    }
+            
+        }
+        
+       Table(parseFloat(prompt("Entrer chiffre table")));
+
+    } 
