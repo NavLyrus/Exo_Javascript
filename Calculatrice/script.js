@@ -375,3 +375,63 @@ function Factorielle() {
 const DireBonjour = (prenom ) => console.log("Bonjour " + prenom);
 
 DireBonjour("Georgie");
+
+
+function MoyenneTrois(a,b,c) {
+    moy = (a+b+c)/3 ;
+    return console.log("La moyenne est de " + moy);
+}
+
+
+
+// meme fonction mais sans limite de note pour faire la moyenne
+
+function MoyenneInf() {
+
+    let somme=0;
+    let result=0;
+    for(let i =0;i<arguments.length;i++) {
+        somme += arguments[i];
+    }
+
+    return console.log("La moyenne arg est de "  + somme/arguments.length);
+ 
+}
+
+
+//MoyenneInf(10,20,10,20,20,20,20,20);
+
+function EstPaire(number) {
+
+   
+
+    /*
+    if ((number%2) === 0) {
+        parity = "paire";
+    }
+    else {
+        parity = "impaire";
+    }*/
+    
+   // return console.log("Le nombre " + number + " est " + parity);
+
+   return number%2 === 0;
+
+    }
+    
+    console.log(EstPaire(12));
+
+
+    function TableMulti() {
+
+        function Table(operande) {
+            let result=0;
+            let operande= parseFloat(prompt("quelle table de multiplication voulez-vous ?"));
+        
+            for(let i =1;i<11;i++) {
+                result= operande * i;
+                console.log(operande + " x " + i + " est egal à " + result);
+            }
+        }
+
+    }
