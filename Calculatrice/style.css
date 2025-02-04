@@ -1,4 +1,6 @@
-
+body {
+    background-color: rgb(145, 145, 145);
+}
 
 .header__nav {
     display:flex;
@@ -8,17 +10,20 @@
     button {
         border-radius: 1px solid;
         border-color:transparent;
-        border-radius: 15px;
-        width: 10%;
+        border-radius: 8px;
+        width: 15%;
         padding: 1%; 
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 0px 5px 0 rgba(0, 0, 0, 0.1);
         color:rgb(104, 104, 104);
         font-weight: 600;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 2vw;
+
     }
 
     button:hover {
-        background-color: rgb(175, 175, 175);
+        background-color: rgb(199, 199, 199);
+        box-shadow: inset 1px 1px 14px -4px rgba(0,0,0,0.48);
         color: white;
         transition: 300ms;
     }

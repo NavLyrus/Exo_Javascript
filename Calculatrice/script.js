@@ -222,10 +222,24 @@ function Enumerer() {
 
 
 
-function Compteur() {
+function Rebour() {
     for(let i=10;i>0;i--)
  {
     console.log(i);
     alert(i);
 
  }}
+
+/* Écrivez une boucle qui calcule la somme des nombres de 1 à 100 et affiche le résultat.
+Sortie attendue :
+La somme des nombres de 1 à 100 est : 5050  */
+
+
+function Somme() {
+    let result=0;
+    for(let i=1;i<101;i++) {
+        result = result + i;
+        //result += i;
+    }
+    console.log(result);
+}
