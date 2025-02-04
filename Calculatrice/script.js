@@ -243,3 +243,78 @@ function Somme() {
     }
     console.log(result);
 }
+
+/*Demandez à l'utilisateur de saisir un mot, puis utilisez une boucle pour compter le nombre de voyelles (a, e, i, o, u) dans ce mot
+const voyelles = ["a", "e", "i", "o", "u"];
+includes()
+let mot = "bryan"
+let compteur = 0  
+*/
+
+function Voyelles() {
+    let mot = prompt("Entrez un mot");
+    let long = mot.length;
+    let compteur = 0;
+    const REFERENTIEL = ["a","e","i","o","u","y"];
+    let longRef = REFERENTIEL.length;
+
+    for(let i=0;i<long;i++) {
+
+       /*for(let j=0;j<6;j++) {
+        if(mot[i].includes(REFERENTIEL[j])) {
+            compteur++;
+        }
+       } 
+        
+       */
+
+       //solution avec 2 boucles:
+
+        /**for(let j=0;j<longRef;j++) {
+            if(mot[i]=== REFERENTIEL[j]) {
+                compteur++;
+            }
+           }
+            */ 
+
+        //solution avec fonction include :
+
+        if(REFERENTIEL.includes(mot[i])) {
+            compteur++;
+        }
+    }
+    console.log(compteur);
+}
+
+/*Utilisez une boucle pour afficher une pyramide de symboles * avec 5 étages.
+Sortie attendue :
+a
+aa
+aaa
+aaaa
+aaaaa */
+
+function Pyramide() {
+
+    let string = "";
+    for(let i = 0;i<5;i++) {
+        string = string+ "a";
+        console.log(string);
+   } 
+
+   let long=6;
+
+    for(let i= 0;i<long;i++) {
+        string += " ".repeat((long-i)/2) + "a".repeat(i) + " ".repeat((long-i)/2) + "\n";
+    }
+    console.log(string);
+
+}
+
+/*Demandez à l'utilisateur un nombre, puis générez et affichez sa table de multiplication de 1 à 10.
+Exemple :
+Entrez un nombre : 4
+4 x 1 = 4
+4 x 2 = 8
+...
+4 x 10 = 40 */
