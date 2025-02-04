@@ -302,7 +302,7 @@ function Pyramide() {
         console.log(string);
    } 
 
-   let long=6;
+   let long=20;
 
     for(let i= 0;i<long;i++) {
         string += " ".repeat((long-i)/2) + "a".repeat(i) + " ".repeat((long-i)/2) + "\n";
@@ -318,3 +318,60 @@ Entrez un nombre : 4
 4 x 2 = 8
 ...
 4 x 10 = 40 */
+
+
+function Table() {
+    let result=0;
+    let operande= parseFloat(prompt("quelle table de multiplication voulez-vous ?"));
+
+    for(let i =1;i<11;i++) {
+        result= operande * i;
+        console.log(operande + " x " + i + " est egal à " + result);
+    }
+}
+
+/*Utilisez une boucle pour afficher tous les nombres entre 1 et 50 qui sont divisibles par 3 et par 5.
+Sortie attendue : 
+15
+30
+45 */
+
+function BoucleNum() {
+    
+    for(i=1;i<51;i++) {
+        if(i%3==0 && i%5==0) {
+            console.log(i);
+        }
+
+    }
+
+} 
+function Addition(a,b) {
+    return a + b;
+}
+
+function Multiplication(a,b) {
+    return console.log(a * b);
+}
+
+function Factorielle() {
+    let number =  parseFloat(prompt("Entrer un nombre"));
+    let result=1;
+
+    for(let i =1;i<number+1;i++) {
+        result = result *i;
+        console.log(result)
+    }
+
+   // console.log(result);
+   
+}
+
+/*function DireBonjour(prenom) {
+    return console.log("Bonjour " + prenom);
+}
+    */
+
+const DireBonjour = (prenom ) => console.log("Bonjour " + prenom);
+
+DireBonjour("Georgie");
