@@ -2,6 +2,8 @@
 
 .header__nav {
     display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap : 20px;
     button {
         border-radius: 1px solid;
