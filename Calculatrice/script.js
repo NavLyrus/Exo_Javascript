@@ -439,3 +439,38 @@ function EstPaire(number) {
        Table(parseFloat(prompt("Entrer chiffre table")));
 
     } 
+
+  
+    function Tableau() {
+        let tab = ["Chien", "Chat", "Lapin"];
+     
+        /*   for(let i=0;i<tab.length;i++) {
+            console.log(tab[i]);
+        }
+    } */
+
+        //deuxieme methode de lecture de tableau
+
+        for(let animal of tab) {
+            console.log(animal);
+        }
+
+    }
+
+    function TableauModif() {
+        let tab = ["Chien", "Chat", "Lapin"];
+     
+        //tab.push("Oiseau");
+        tab.splice(3,0,"Oiseau") //splice(a partir de index 3,supprime 0 element,ajoute "Oiseau")
+
+        tab.splice(1,1); // splice(a partir de index 1,supprime 1 element,"")
+
+        for(let animal of tab) {
+            console.log(animal);
+        }
+    }
+
+    
+
+
+
