@@ -419,7 +419,7 @@ function EstPaire(number) {
 
     }
     
-    console.log(EstPaire(12));
+  //  console.log(EstPaire(12));
 
 
   function TableMulti() {
@@ -440,7 +440,7 @@ function EstPaire(number) {
 
     } 
 
-  
+  //Créez un tableau animaux contenant les valeurs : "Chien", "Chat", "Lapin". Utilisez une boucle pour afficher chaque élément dans la console.
     function Tableau() {
         let tab = ["Chien", "Chat", "Lapin"];
      
@@ -457,6 +457,12 @@ function EstPaire(number) {
 
     }
 
+
+    /*Ajoutez "Oiseau" à la fin du tableau animaux.
+Supprimez "Chat" du tableau.
+Affichez le tableau final.
+  */
+
     function TableauModif() {
         let tab = ["Chien", "Chat", "Lapin"];
      
@@ -468,9 +474,69 @@ function EstPaire(number) {
         for(let animal of tab) {
             console.log(animal);
         }
-    }
 
-    
+        //let index = animaux.indexOf("Chat");
+    }
+//Créez une fonction trouverElement qui prend un tableau et une valeur en paramètre, et retourne true si la valeur est dans le tableau, sinon false.
+
+    function findTab(tab,saisie) {
+        //let tab = ["Chien", "Chat", "Lapin"];
+        //let saisie = prompt("Rechercher un mot");
+        let index = tab.indexOf(saisie);
+
+        //return tab.includes(saisie);
+        if(index === -1) {
+            return alert("Mot introuvable");
+        } 
+        else {
+            return alert("Le mot est a l'index " + index)
+        }
+      }
+
+      //console.log(findTab(["Chien", "Chat", "Lapin"],"Chien"))
+
+
+      //Créez une fonction sommeTableau qui prend un tableau de nombres et retourne leur somme.
+      function SumTab(tab) {
+
+        let somme = 0;
+       /* 
+       let long = tab.length;
+
+        for(let i=0;i<long;i++)  {
+            somme = somme + tab[i];
+        }
+
+        */
+
+        for(let nombre of tab) {
+            somme += nombre;
+        }
+
+        return somme;  
+      }
+
+      let tab = [1,2,3,4];
+
+      //console.log(SumTab(tab));
+
+      //Créez une fonction inverserTableau qui prend un tableau et retourne un nouveau tableau avec les éléments dans l'ordre inverse.
+
+      function InvertTab(tab) {
+
+        let tub = [];
+        index =0;
+
+        for(let i=0;i<tab.length;i++) {
+            index = tab.length-i;
+            tub[index-1]=tab[i];
+            }
+        return tub;
+      }
+
+      console.log(InvertTab(tab));
+
+
 
 
 
