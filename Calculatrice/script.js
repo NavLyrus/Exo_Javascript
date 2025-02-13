@@ -562,6 +562,15 @@ Affichez le tableau final.
 
       //console.log(AnalyseNote(tab) )
 
+
+
+
+      /*Créez un objet film avec les propriétés suivantes :
+        titre
+        annee
+        realisateur (un objet contenant nom et prenom)
+        Affichez le prénom du réalisateur dans la console.  */
+
       let livre = {
         titre : "le temps des tempetes",
         auteur : "Nicolas Bracelet",
@@ -583,6 +592,10 @@ Affichez le tableau final.
       }
       //console.log(film.realisateur.prenom);
 
+
+
+//Créez un objet panier contenant plusieurs produits 
+// (clé : nom du produit, valeur : prix). Utilisez une boucle pour afficher chaque produit et son prix.
       let panier = {
 
         article1: {
@@ -605,6 +618,9 @@ Affichez le tableau final.
         console.log(cle,panier[cle]);
       }  */
 
+
+//Créez un objet joueur avec les propriétés nom, score,
+//  et une méthode ajouterScore qui augmente le score d’un certain nombre de point
         let joueur ={
             nom: "Jojo",
             score: 0,
@@ -615,9 +631,30 @@ Affichez le tableau final.
 
             }
         }
-        joueur.ajouterScore(10);
+        //joueur.ajouterScore(10);
 
-        console.log(joueur.score)
+        //console.log(joueur.score);
+
+
+        /*Créez un tableau d'objets utilisateurs, où chaque objet représente un utilisateur avec les propriétés nom et email. 
+        Ajoutez une méthode à chaque objet pour afficher : "Bonjour, je m'appelle [nom] et voici mon email : [email]." */
+
+
+        let tab_obj = [
+            {nom:"Jojo", email:"jojo@bernard.fr",affichage(){return "Bonjour, je m'appelle " + this.nom + " et mon email est " + this.email;}},
+            {nom:"Jami", email:"jami@gourmaud.fr",affichage(){return "Bonjour, je m'appelle " + this.nom + " et mon email est " + this.email;}},
+            {nom:"Joel", email:"joel@robuchon.fr",affichage(){return "Bonjour, je m'appelle " + this.nom + " et mon email est " + this.email;}}
+        ]
+
+        for(let index in tab_obj) {
+            console.log(tab_obj[index].affichage());
+        }
+        
+
+
+
+
+
 
 
 
