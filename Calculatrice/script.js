@@ -516,7 +516,7 @@ Affichez le tableau final.
         return somme;  
       }
 
-      let tab = [1,2,3,4];
+      //let tab = [1,2,3,4];
 
       //console.log(SumTab(tab));
 
@@ -534,9 +534,29 @@ Affichez le tableau final.
         return tub;
       }
 
-      console.log(InvertTab(tab));
+      //console.log(InvertTab(tab));
 
 
+      /* Créez une fonction analyserNotes qui prend un tableau de notes (nombres) et retourne un objet avec :
+       La note minimale. La note maximale. La moyenne des notes.  */
 
+
+      function AnalyseNote(tab){
+        let tri = new Object();
+        let moyenne=0; 
+        
+        moyenne = SumTab(tab)/tab.length;
+
+        tri = {
+            max : Math.max(...tab),
+            min : Math.min(...tab),
+            moy : moyenne
+
+        }
+        return tri;
+      }
+      let tab = [20,10,0,15];
+
+      console.log(AnalyseNote(tab) )
 
 
