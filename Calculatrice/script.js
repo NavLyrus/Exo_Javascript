@@ -543,20 +543,82 @@ Affichez le tableau final.
 
       function AnalyseNote(tab){
         let tri = new Object();
-        let moyenne=0; 
+        //let moyenne=0; 
         
-        moyenne = SumTab(tab)/tab.length;
+        //moyenne = SumTab(tab)/tab.length;
+
+        let somme = tab.reduce((acc,tab) => acc + tab , 0 ); // commence par l'index 0
+        let moyenne = somme / tab.length ;
 
         tri = {
-            max : Math.max(...tab),
-            min : Math.min(...tab),
-            moy : moyenne
+            note_max : Math.max(...tab),
+            note_min : Math.min(...tab),
+            note_moy : moyenne
 
         }
         return tri;
       }
-      let tab = [20,10,0,15];
+      //let tab = [20,10,0,15];
 
-      console.log(AnalyseNote(tab) )
+      //console.log(AnalyseNote(tab) )
+
+      let livre = {
+        titre : "le temps des tempetes",
+        auteur : "Nicolas Bracelet",
+        annee : 2020
+      }
+      //console.log(livre);
+      livre.genre = "politik";
+      delete livre.auteur;
+
+      //console.log(livre);
+
+      let film = {
+        titre : "Dr Follamour",
+        annee : 1964,
+        realisateur : {
+            prenom: "Stanley",
+            nom: "Kubrick"
+        }
+      }
+      //console.log(film.realisateur.prenom);
+
+      let panier = {
+
+        article1: {
+            nom_du_produit : "Corde" ,
+            prix: "20 €"
+        },
+
+        article2: {
+            nom_du_produit: "Tabouret" ,
+            prix: "70 €"
+        },
+
+        article3:  {
+            nom_du_produit: "Destop" ,
+            prix: "5€"
+        }
+      }
+
+      /*for(let cle in panier) {
+        console.log(cle,panier[cle]);
+      }  */
+
+        let joueur ={
+            nom: "Jojo",
+            score: 0,
+            ajouterScore(ajout) {
+
+                this.score += ajout;
+                return this.score;
+
+            }
+        }
+        joueur.ajouterScore(10);
+
+        console.log(joueur.score)
+
+
 
 
