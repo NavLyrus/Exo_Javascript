@@ -1,6 +1,6 @@
 
 
-
+console.log("script.js OK")
 /*
 Exercice 1 : Calculatrice simple
 Demandez à l'utilisateur de saisir deux nombres et une opération (+, -, *, /). Effectuez l'opération choisie et affichez le résultat.
@@ -374,7 +374,7 @@ function Factorielle() {
 
 const DireBonjour = (prenom ) => console.log("Bonjour " + prenom);
 
-DireBonjour("Georgie");
+//DireBonjour("Georgie");
 
 
 function MoyenneTrois(a,b,c) {
@@ -621,7 +621,8 @@ Affichez le tableau final.
 
 //Créez un objet joueur avec les propriétés nom, score,
 //  et une méthode ajouterScore qui augmente le score d’un certain nombre de point
-        let joueur ={
+
+        let joueur = {
             nom: "Jojo",
             score: 0,
             ajouterScore(ajout) {
@@ -646,10 +647,14 @@ Affichez le tableau final.
             {nom:"Joel", email:"joel@robuchon.fr",affichage(){return "Bonjour, je m'appelle " + this.nom + " et mon email est " + this.email;}}
         ]
 
-        for(let index in tab_obj) {
+       /* for(let index in tab_obj) {
             console.log(tab_obj[index].affichage());
-        }
+        }  */
+
+
         
+
+
 
 
 
